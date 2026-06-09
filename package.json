@@ -2,7 +2,7 @@
   "name": "com.badranraza.ide.antigravity",
   "displayName": "Antigravity IDE Editor",
   "description": "Antigravity IDE integration for Unity. Adds Google Antigravity IDE (the VS Code-based code editor in the Antigravity product line) as an External Script Editor option, generates .csproj/.sln for IntelliSense, and offers single-instance window reuse. Detects Antigravity IDE specifically and ignores the standalone Antigravity 2.0 agent app.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "unity": "2019.4",
   "unityRelease": "25f1",
   "license": "MIT",
@@ -18,6 +18,6 @@
     "url": "https://github.com/BadranRaza/com.unity.ide.antigravity.git"
   },
   "_upm": {
-    "changelog": "BREAKING CHANGE: package name renamed from com.unity.ide.antigravity to com.badranraza.ide.antigravity.\n\nThe com.unity.* namespace is reserved by Unity Technologies and OpenUPM rejects packages that use it. v2.0.0 moves to a third-party convention so the package can be listed on OpenUPM and to defend against any future Unity namespace enforcement.\n\nMigrating from v1.x:\n\n1. In Unity Package Manager, remove the old com.unity.ide.antigravity entry.\n2. Re-add via the same git URL (https://github.com/BadranRaza/com.unity.ide.antigravity.git). Package Manager will install it under the new com.badranraza.ide.antigravity name.\n3. Your External Tools selection survives the rename. No code changes are required in Unity projects."
+    "changelog": "Fixed: added missing .meta files for CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTORS.md and SECURITY.md. Without them Unity ignored the files and logged 'has no meta file, but it's in an immutable folder' warnings on every import from the immutable PackageCache."
   }
 }

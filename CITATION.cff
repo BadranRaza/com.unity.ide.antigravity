@@ -6,8 +6,8 @@ type: software
 license: MIT
 repository-code: "https://github.com/BadranRaza/com.unity.ide.antigravity"
 url: "https://github.com/BadranRaza/com.unity.ide.antigravity"
-version: 2.0.0
-date-released: 2026-05-23
+version: 2.0.1
+date-released: 2026-06-10
 keywords:
   - unity
   - unity-package

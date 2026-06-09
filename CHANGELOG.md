@@ -1,5 +1,15 @@
 # Code Editor Package for Antigravity — Changelog
 
+## [2.0.1] - 2026-06-10
+
+### Fixed
+
+- **Added missing `.meta` files** for `CITATION.cff`, `CODE_OF_CONDUCT.md`, `CONTRIBUTORS.md` and `SECURITY.md`. UPM packages must ship a `.meta` for every imported file; without them Unity ignores the files and logs "Asset ... has no meta file, but it's in an immutable folder. The asset will be ignored." warnings on every import from the immutable PackageCache. A full repo scan confirmed these four were the only assets missing metas.
+
+### Changed
+
+- `CITATION.cff` `version`: 2.0.0 → 2.0.1.
+
 ## [2.0.0] - 2026-05-23
 
 ### ⚠️ BREAKING CHANGE — package renamed
