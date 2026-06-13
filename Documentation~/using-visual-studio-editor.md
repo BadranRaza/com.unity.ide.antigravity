@@ -6,18 +6,19 @@
    [antigravity.google](https://antigravity.google). This is the VS Code-fork
    code editor — **not** the standalone "Antigravity" agent app (Antigravity
    2.0), which cannot host script editing.
-2. Open **Unity > Preferences > External Tools** (macOS) or
-   **Edit > Preferences > External Tools** (Windows / Linux).
-3. In the **External Script Editor** dropdown, select **Antigravity IDE**.
-   If you previously had a plain "Antigravity" entry selected, that pointed
-   at the agent app — pick "Antigravity IDE" instead.
-4. The panel will reload and show additional settings.
+2. Install this package through Unity Package Manager.
+3. Wait for Unity to finish importing/compiling. The package automatically
+   selects **Antigravity IDE** as Unity's External Script Editor when a valid
+   install is discovered.
+4. Open **Unity > Preferences > External Tools** (macOS) or
+   **Edit > Preferences > External Tools** (Windows / Linux) only if you want
+   to inspect or customize the generated project settings.
 
 ## Generate .csproj Files
 
 The package generates `.csproj` and `.sln` files so Antigravity IDE has full
-C# IntelliSense and Unity API awareness. Use the checkboxes to control which
-package types get a `.csproj` file:
+C# IntelliSense and Unity API awareness. You can use the checkboxes to
+customize which package types get a `.csproj` file:
 
 | Setting               | Description                                                          |
 | --------------------- | -------------------------------------------------------------------- |
@@ -30,7 +31,9 @@ package types get a `.csproj` file:
 | **Unknown packages**  | Packages with an unrecognized or missing origin                      |
 | **Player projects**   | Generates an extra `ProjectName.Player.csproj` for player assemblies |
 
-Click **Regenerate project files** to apply changes.
+Embedded, local, registry, Git, local tarball and unknown packages are enabled
+automatically by default. Click **Regenerate project files** only when you
+manually change these settings and want to apply them immediately.
 
 ## Workspace Config Files
 

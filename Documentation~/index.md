@@ -9,7 +9,11 @@ external code editor for Unity. It provides:
 - Automatic discovery of your Antigravity IDE installation (and rejects the
   standalone Antigravity 2.0 agent app, which is a separate, non-editor
   product)
+- Automatic selection of Antigravity IDE as Unity's External Script Editor
+  after package import, once Unity has finished compiling/importing
 - `.sln` and `.csproj` generation for full C# IntelliSense
+- Recommended `.csproj` generation for embedded, local, registry, Git, local
+  tarball and unknown packages by default
 - Workspace config setup (`.vscode/launch.json`, `settings.json`, `extensions.json`)
 - Optional single-instance window reuse, backed by a scan of Antigravity
   IDE's own `workspaceStorage`

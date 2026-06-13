@@ -35,7 +35,12 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 		ProjectGenerationFlag m_ProjectGenerationFlag = (ProjectGenerationFlag)EditorPrefs.GetInt(
 			"unity_project_generation_flag",
-			(int)(ProjectGenerationFlag.Local | ProjectGenerationFlag.Embedded));
+			(int)(ProjectGenerationFlag.Local |
+			      ProjectGenerationFlag.Embedded |
+			      ProjectGenerationFlag.Registry |
+			      ProjectGenerationFlag.Git |
+			      ProjectGenerationFlag.LocalTarBall |
+			      ProjectGenerationFlag.Unknown));
 
 		public string[] ProjectSupportedExtensions => EditorSettings.projectGenerationUserExtensions;
 

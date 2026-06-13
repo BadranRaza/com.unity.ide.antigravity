@@ -1,5 +1,16 @@
 # Code Editor Package for Antigravity — Changelog
 
+## [2.0.2] - 2026-06-13
+
+### Added
+
+- **Automatic External Script Editor selection** for Antigravity IDE. After package import and once Unity compile/import settles, the package discovers Antigravity IDE and selects it as Unity's External Script Editor automatically.
+- **Recommended C# project generation defaults** now include embedded, local, registry, Git, local tarball and unknown packages, so package asmdefs are included in generated `.csproj` files without manual checkbox setup.
+
+### Changed
+
+- Auto-configuration runs only after Unity is idle and only re-selects Antigravity once per discovered install path, so users can still intentionally switch to another editor later.
+
 ## [2.0.1] - 2026-06-10
 
 ### Fixed

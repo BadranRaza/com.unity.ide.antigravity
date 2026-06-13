@@ -27,8 +27,13 @@ please ⭐ the repo. That's how other Unity devs find it.
 - **Auto-Discovery**: automatically finds your **Antigravity IDE**
   installation on macOS, Windows and Linux (and ignores the standalone
   Antigravity agent app, which cannot host script editing).
+- **Auto-Selection**: selects **Antigravity IDE** as Unity's External Script
+  Editor after package import once Unity has finished compiling/importing.
 - **IntelliSense**: generates `.sln` and `.csproj` files for complete C#
   IntelliSense and Unity API support inside Antigravity IDE.
+- **Package-aware projects by default**: includes embedded, local, registry,
+  Git, local tarball and unknown packages in generated `.csproj` files so
+  package asmdefs are visible to code intelligence.
 - **Workspace Setup**: writes `.vscode/` workspace config files
   (`launch.json`, `settings.json`, `extensions.json`) that Antigravity IDE
   reads as a VS Code fork.
@@ -54,6 +59,11 @@ The package will appear in Package Manager under the name
 **`com.badranraza.ide.antigravity`** and can be updated from there when new
 versions are released.
 
+After Unity finishes importing and compiling, the package automatically
+selects **Antigravity IDE** as the External Script Editor when a valid
+Antigravity IDE install is discovered. It also enables the recommended
+`.csproj` generation sources for Unity packages.
+
 > **Alternative**: if you cloned the repo locally, use
 > `+ → Add package from disk...` and point to the `package.json`.
 
@@ -69,13 +79,15 @@ versions are released.
 
 1. Install **Antigravity IDE** from
    [antigravity.google](https://antigravity.google).
-2. Go to `Unity > Preferences > External Tools` (macOS) or
+2. Install this package through Unity Package Manager.
+3. Wait for Unity to finish importing/compiling. The package automatically
+   selects **Antigravity IDE** from the **External Script Editor** dropdown.
+   If a plain "Antigravity" entry was previously selected, that was the agent
+   app and this package will replace it with the actual IDE when discovered.
+4. The package enables `.csproj` generation for embedded, local, registry,
+   Git, local tarball and unknown packages. You can still adjust these later
+   from `Unity > Preferences > External Tools` (macOS) or
    `Edit > Preferences > External Tools` (Windows / Linux).
-3. Select **Antigravity IDE** from the **External Script Editor** dropdown.
-   If you previously had a plain "Antigravity" entry selected, that was the
-   agent app — pick "Antigravity IDE" instead.
-4. Choose which package types should have `.csproj` files generated.
-5. Click **Regenerate project files** to apply.
 
 ### Reuse Existing Window
 

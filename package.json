@@ -1,8 +1,8 @@
 {
   "name": "com.badranraza.ide.antigravity",
   "displayName": "Antigravity IDE Editor",
-  "description": "Antigravity IDE integration for Unity. Adds Google Antigravity IDE (the VS Code-based code editor in the Antigravity product line) as an External Script Editor option, generates .csproj/.sln for IntelliSense, and offers single-instance window reuse. Detects Antigravity IDE specifically and ignores the standalone Antigravity 2.0 agent app.",
-  "version": "2.0.1",
+  "description": "Antigravity IDE integration for Unity. Adds Google Antigravity IDE (the VS Code-based code editor in the Antigravity product line) as an External Script Editor option, auto-selects it when discovered, generates .csproj/.sln for IntelliSense, and offers single-instance window reuse. Detects Antigravity IDE specifically and ignores the standalone Antigravity 2.0 agent app.",
+  "version": "2.0.2",
   "unity": "2019.4",
   "unityRelease": "25f1",
   "license": "MIT",
@@ -18,6 +18,6 @@
     "url": "https://github.com/BadranRaza/com.unity.ide.antigravity.git"
   },
   "_upm": {
-    "changelog": "Fixed: added missing .meta files for CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTORS.md and SECURITY.md. Without them Unity ignored the files and logged 'has no meta file, but it's in an immutable folder' warnings on every import from the immutable PackageCache."
+    "changelog": "Added automatic External Script Editor selection for Antigravity IDE after package import, plus recommended project generation defaults for embedded, local, registry, Git, local tarball and unknown packages."
   }
 }

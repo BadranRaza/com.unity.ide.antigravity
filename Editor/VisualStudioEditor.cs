@@ -39,6 +39,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			CodeEditor.Register(new VisualStudioEditor());
 
 			_discoverInstallations = AsyncOperation<Dictionary<string, IVisualStudioInstallation>>.Run(DiscoverInstallations);
+			AntigravityAutoConfiguration.Schedule();
 		}
 
 #if UNITY_2019_4_OR_NEWER && !UNITY_2020

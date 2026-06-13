@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this package or refer to its approach to detecting Antigravity IDE vs. the Antigravity 2.0 agent app, please cite it as below."
 title: "Unity Editor integration for Google Antigravity IDE"
-abstract: "Unity package that integrates Google Antigravity IDE (the VS Code-based code editor in the Antigravity product line) as Unity's External Script Editor. Generates .csproj/.sln for IntelliSense, supports single-instance window reuse, and reliably distinguishes Antigravity IDE from the standalone Antigravity 2.0 agent app via resources/app/package.json manifest verification."
+abstract: "Unity package that integrates Google Antigravity IDE (the VS Code-based code editor in the Antigravity product line) as Unity's External Script Editor. Auto-selects Antigravity IDE when discovered, generates .csproj/.sln for IntelliSense, supports single-instance window reuse, and reliably distinguishes Antigravity IDE from the standalone Antigravity 2.0 agent app via resources/app/package.json manifest verification."
 type: software
 license: MIT
 repository-code: "https://github.com/BadranRaza/com.unity.ide.antigravity"
 url: "https://github.com/BadranRaza/com.unity.ide.antigravity"
-version: 2.0.1
-date-released: 2026-06-10
+version: 2.0.2
+date-released: 2026-06-13
 keywords:
   - unity
   - unity-package
